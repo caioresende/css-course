@@ -11,6 +11,10 @@ html, body {
     align-items: center;
 }
 
+.color-bg {
+   background: #FFEA00;
+}
+
 .clear-btn {
     border: none;
     outline: none;
@@ -29,4 +33,24 @@ html, body {
     padding: 24px;
     border-radius: 6px;
     box-shadow: 0 10px 0 #311B92;
+}
+
+@keyframes anim-in {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+  
+@keyframes anim-in-pseudo {
+    0% { background: rgba(#000,0.25); }
+    100% { background: rgba(#000,0); }
+}
+  
+@keyframes anim-out {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+  
+@keyframes anim-out-pseudo {
+    0% { background: rgba(#000,0.25); }
+    100% { background: rgba(#000,0); }
 }
