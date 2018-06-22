@@ -14,24 +14,22 @@ html, body {
 
 .color-bg {
     background: #2979FF;
- }
-
- /* MATERIAL BUTTON */
+}
 
 .clear-btn {
-    border: none;
     outline: none;
+    border: none;
 }
 
 .text-btn {
     color: #1976D2;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-#material-btn {  
+#material-btn {
     background: #FFFFFF;
     padding: 24px;
     border-radius: 6px;
@@ -39,37 +37,16 @@ html, body {
     background-position: center;
     transition: background 0.8s;
     cursor: pointer;
-    margin-top: 56px;
 }
 
 #material-btn:hover {
-    background: #E3F2FD radial-gradient(circle, transparent 1%, #E3F2FD 1%) center/15000%;
-  }
+    background: #E3F2Fd radial-gradient(circle, transparent 1%, #E3F2FD 1%) center/15000%;
+}
 
-  #material-btn:active {
+#material-btn:active {
     background-color: #BBDEFB;
     background-size: 100%;
     transition: background 0s;
-    margin-top: 61px;
+    margin-top: 5px;
     box-shadow: 0 5px 0 #64B5F6;
-  }
-
-  /* EXTRA CSS */
-
-.text {
-    font-weight: 300;
-    font-family: Roboto;
-    color: white;
-    padding: 0;
-    margin: 0;
 }
-
-h1 {
-    font-size: 72px;
-}
-
-p {
-    font-size: 48px;
-    opacity: .54;
-}
-  
