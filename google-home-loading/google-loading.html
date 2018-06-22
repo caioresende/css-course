@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="google-loading.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<title>Google Home Loading Animation</title>
+</head>
+
+<body class="flex">
+    <script>
+        var showMask = false;
+        var el;
+        var toggleMask = setInterval(function() {
+            el = document.getElementById("mask");
+            showMask ? el.style.opacity = "0" : el.style.opacity = "1";
+            showMask = !showMask;
+        }, 1000);
+    </script>
+    <section class="flex">
+        <svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Draw the outline of the motion path in grey, along with 2 small circles at key points -->
+            <path 
+                id="motionPath" 
+                opacity="0" 
+                d="M540,340c-110.5,0-200,89.5-200,200c0,110.8,89.2,200,200,200c110.5,0,200-89.5,200-200
+            c0-52.8-4.1-144.6-69.5-217.7c-45.6-51-130.2-18.6-130.3,49.8L539.5,640"/>
+
+            <rect 
+                x="540" 
+                y="540" 
+                rx="100" 
+                ry="100" 
+                width="200"
+                height="200" 
+                fill="#F2F2F2"></rect>
+            
+
+            <rect 
+                id="redCircle"
+                width="200" 
+                height="200"  
+                rx="100" 
+                ry="100" 
+                fill="#EA4335">  
+                <animate 
+                    attributeName="height" 
+                    values="200;200;200;200;200;300;300;300;200;200;"
+                    dur="2s"
+                    repeatCount="indefinite">
+                </animate>
+                <animateMotion
+                    id="redCircleAnim" 
+                    dur="2s" 
+                    repeatCount="indefinite"
+                    keySplines=".5,.8,.1,.8;"
+                    keyTimes="0;1"
+                    calcMode="spline">
+                    <mpath xlink:href="#motionPath"/>
+                </animateMotion>
+            </rect>
+
+            <path 
+                id="mask"
+                fill="#FFFFFF" 
+                opacity="0"
+                d="M739.8,640.1c0,55.2-44.8,100-100,100c-55.2,0-100-44.8-100-100h-15.5v224.5h231.1V640.1H739.8z"/>
+        </svg>
+    </section>
+</body>
+</html>
